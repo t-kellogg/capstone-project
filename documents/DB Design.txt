@@ -1,0 +1,40 @@
+Tables
+---------
+User
+	u_id:			int
+	username:		String
+	password:		String
+	email:			String
+	f_name:			String
+	l_name:			String
+	p_no:			String
+	role:			int(enum)
+
+
+
+User Account
+	ua_id			int
+	active			bool
+	user_id			int			references user(u_id)
+	
+		
+Bank Account
+	ba_id			int
+	type			int(enum)
+	balance			double
+	active			bool
+	useraccount_id	int			references useraccount(ua_id)
+	
+
+User -> Bank Account junction
+	bank_account_id	int			references bankaccount(ba_id)
+	user_id			int			references user(u_id)
+
+Log
+	l_id			int
+	user_id			int			references user(u_id)
+	from_bank_id	int			references bankaccount(ba_id)
+	to_bank_id		int			references bankaccount(ba_id)
+	action			int(enum)
+	amount			double
+	timestamp		bigint

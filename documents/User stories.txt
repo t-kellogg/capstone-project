@@ -1,0 +1,20 @@
+User Stories - Group 2
+---------------------------------
+
+Key
+	Client: Bank customer
+	Employee: Bank employee
+	User: Any user of the application (client or employee)
+	System: The application
+
+
+1.  As a Client, I want to open a new User Account
+2.  As a Client, I should be able to open a new Bank Account
+3.  As a Client, I should be able to close a Bank Account
+4.  As a User, I should be able to login
+5.  As a System, I should log all transactions
+6.  As a Client, I should be able to share a Bank Account with other users
+7.  As a User, I should be able to withdraw from a Bank Account
+8.  As a User, I should be able to deposit to a Bank Account
+9.  As a User, I should be able to transfer to another Bank Account
+10. As a System, I should be able to authenticate personnel for transactions
