@@ -3,7 +3,7 @@ package com.ey.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_accounts")
+@Table(name="user_accounts")
 public class User {
 
     @Id
