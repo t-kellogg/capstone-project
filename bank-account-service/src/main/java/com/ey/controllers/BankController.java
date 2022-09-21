@@ -15,9 +15,12 @@ public class BankController {
     @Autowired
     BankService bankService;
 
+
     @GetMapping("/bankaccounts")
     public ResponseEntity<List<BankAccount>> getAllBankAccounts() {
-        return ResponseEntity.ok(bankService.getAllBankAccounts());
+        List<BankAccount> bankAccounts = (List<BankAccount>)bankService.getAllBankAccounts();
+
+        return ResponseEntity.ok(bankAccounts);
     }
 
     @GetMapping("/bankaccounts/{id}")
