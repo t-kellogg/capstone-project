@@ -1,0 +1,61 @@
+package com.ey.controllers;
+
+import com.ey.models.BankAccount;
+import com.ey.services.BankService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+public class LogController {   
+
+    @Autowired
+    LogService logService;
+
+    @GetMapping("/logs")
+    public ResponseEntity<List<Log>> getAllLogs() {
+        List<Log> logs = (List<Log>)logService.getAllLogs();
+
+        return ResponseEntity.ok(logs);
+    }
+
+    @GetMapping("/logs/{id}")
+    public ResponseEntity<Log> getLogById(@PathVariable("id") String id) {
+        return ResponseEntity.ok(logService.getLog(Integer.parseInt(id)));
+
+        @PostMapping
+        public ResponseEntity<BankAccount> addBankAccount(@RequestBody BankAccount bankAccount) {
+            BankAccount newBankAccount = bankService.addBankAccount(bankAccount);
+            return ResponseEntity.status(201).body(newBankAccount);
+        }
+    
+        @PutMapping("/logs/{id}")
+        public ResponseEntity<BankAccount> updateLog(@RequestBody Log log, @PathVariable String id) {
+            log.setId(Integer.parseInt(id));
+            Log updatedLog = logService.updateLog(log);
+            if(updatedLog != null) {
+                return ResponseEntity.ok(updatedLog);
+            }
+            return ResponseEntity.badRequest().build();
+        }
+    
+        @DeleteMapping("/logs/{id}")
+        public ResponseEntity<Log> deleteLog(@PathVariable String id) {
+    
+            Optional<Log> logOptional = Optional.of(logService.getLog(Integer.parseInt(id)));
+            if(logOptional.isPresent()) {
+                boolean deleted = logService.deleteLog(Integer.parseInt(id));
+                if(deleted)
+                    return ResponseEntity.ok(logOptional.get());
+                return ResponseEntity.unprocessableEntity().build();
+            }
+    
+            return ResponseEntity.badRequest().build();
+        }
+    
+    
+    
+    }
