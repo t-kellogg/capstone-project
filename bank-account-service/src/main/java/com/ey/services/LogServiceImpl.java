@@ -4,10 +4,12 @@ import com.ey.models.Log;
 import com.ey.repositories.LogRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class LogServiceImpl implements LogService{
     @Autowired // Field Injection
     LogRepo logRepo;
