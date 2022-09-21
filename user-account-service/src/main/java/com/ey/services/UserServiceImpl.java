@@ -23,7 +23,9 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> getAllUsers() {
 //        if(ids == null) {
-            return (List<User>) ur.findAll();
+            List<User> users = (List<User>) ur.findAll();
+            System.out.println(users);
+            return users;
 //        }
 //        return (List<User>) ur.findAllById(Arrays.asList(ids));
     }

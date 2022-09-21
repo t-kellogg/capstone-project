@@ -31,6 +31,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
+        System.out.println("Here");
          List<User> users = us.getAllUsers();
 //         if (ids == null){
 //             return ResponseEntity.ok(users);
@@ -38,6 +39,7 @@ public class UserController {
 //         if(users.size() != ids.length){
 //             return ResponseEntity.badRequest().body(users);
 //         }
+        System.out.println(users);
          return ResponseEntity.ok(users);
     }
 
