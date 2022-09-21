@@ -3,16 +3,16 @@ package com.ey.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "user_accounts")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "u_id")
+    @Column(name = "ua_id")
     private int id;
 
-    private String userName;
-    private String password;
+    private String username;
+    private String token;
     private String email;
 
     @Column(name = "f_name")
@@ -29,12 +29,12 @@ public class User {
     public User() {
     }
 
-    public User(int id, String userName, String password,
+    public User(int id, String username, String token,
                 String email, String firstName, String lastName,
                 String phoneNumber, Role role) {
         this.id = id;
-        this.userName = userName;
-        this.password = password;
+        this.username = username;
+        this.token = token;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -51,19 +51,19 @@ public class User {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getToken() {
+        return token;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public String getEmail() {
@@ -110,8 +110,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", token='" + token + '\'' +
                 ", email='" + email + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
