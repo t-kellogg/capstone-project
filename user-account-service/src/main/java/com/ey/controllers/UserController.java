@@ -30,14 +30,14 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers(@RequestParam(required = false) Integer[] ids) {
-         List<User> users = us.getAllUsers(ids);
-         if (ids == null){
-             return ResponseEntity.ok(users);
-         }
-         if(users.size() != ids.length){
-             return ResponseEntity.badRequest().body(users);
-         }
+    public ResponseEntity<List<User>> getAllUsers() {
+         List<User> users = us.getAllUsers();
+//         if (ids == null){
+//             return ResponseEntity.ok(users);
+//         }
+//         if(users.size() != ids.length){
+//             return ResponseEntity.badRequest().body(users);
+//         }
          return ResponseEntity.ok(users);
     }
 

@@ -21,11 +21,11 @@ public class UserServiceImpl implements UserService{
     private Environment env;
 
     @Override
-    public List<User> getAllUsers(@RequestParam(required = false) Integer[] ids) {
-        if(ids == null) {
+    public List<User> getAllUsers() {
+//        if(ids == null) {
             return (List<User>) ur.findAll();
-        }
-        return (List<User>) ur.findAllById(Arrays.asList(ids));
+//        }
+//        return (List<User>) ur.findAllById(Arrays.asList(ids));
     }
 
     @Override
