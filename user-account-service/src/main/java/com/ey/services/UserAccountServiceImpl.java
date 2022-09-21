@@ -1,48 +1,46 @@
 package com.ey.services;
 
-import com.ey.models.User;
-import com.ey.repositories.UserRepo;
+import com.ey.models.UserAccount;
+import com.ey.repositories.UserAccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserAccountServiceImpl implements UserAccountService {
 
     @Autowired
-    private UserRepo ur;
+    private UserAccountRepo ur;
 
     @Autowired
     private Environment env;
 
     @Override
-    public List<User> getAllUsers() {
+    public List<UserAccount> getAllUsers() {
 //        if(ids == null) {
-            List<User> users = (List<User>) ur.findAll();
-            System.out.println(users);
-            return users;
+            List<UserAccount> userAccounts = (List<UserAccount>) ur.findAll();
+            System.out.println(userAccounts);
+            return userAccounts;
 //        }
 //        return (List<User>) ur.findAllById(Arrays.asList(ids));
     }
 
     @Override
-    public Optional<User> getUserById(int id) {
+    public Optional<UserAccount> getUserById(int id) {
         return ur.findById(id);
     }
 
     @Override
-    public User addUser(User user) {
-        return ur.save(user);
+    public UserAccount addUser(UserAccount userAccount) {
+        return ur.save(userAccount);
     }
 
     @Override
-    public User updateUser(User user) {
-        return ur.save(user);
+    public UserAccount updateUser(UserAccount userAccount) {
+        return ur.save(userAccount);
     }
 
     @Override
