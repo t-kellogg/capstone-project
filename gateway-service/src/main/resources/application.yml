@@ -9,17 +9,17 @@ spring:
         - PrefixPath=/
       routes:
         # =====================
-        - id: useraccounts
-          uri: lb://useraccounts
+        - id: useraccount
+          uri: lb://useraccount
           predicates:
             - Path=/useraccounts/**
         # =====================
-        - id: bankaccounts
-          uri: lb://bankaccounts
+        - id: bankaccount
+          uri: lb://bankaccount
           predicates:
             - Path=/bankaccounts/**
         # =====================
         - id: authorization
-          uri: lb://authorizations
+          uri: lb://authorization
           predicates:
             - Path=/authorizations/**

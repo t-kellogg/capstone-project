@@ -3,8 +3,7 @@ package com.ey.models;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name="user_accounts")
+
 public class UserAccount {
 
     @Id
@@ -30,11 +29,11 @@ public class UserAccount {
     @Column(name = "active")
     private boolean active;
 
-    @ElementCollection
-    @CollectionTable(name = "user_accounts_bank_accounts",
-            joinColumns = @JoinColumn(name = "user_account_id"))
-    @Column(name="bank_account_id")
-    private List<Integer> bankAccounts;
+//    @ElementCollection
+//    @CollectionTable(name = "user_accounts_bank_accounts",
+//            joinColumns = @JoinColumn(name = "user_account_id"))
+//    @Column(name="bank_account_id")
+//    private List<Integer> bankAccounts;
 
     public UserAccount() {
     }
@@ -52,21 +51,21 @@ public class UserAccount {
         this.role = role;
     }
 
-    public boolean addBankAccount(Integer id) {
-        if(!bankAccounts.contains(id)) {
-            return bankAccounts.add(id);
-        }
+//    public boolean addBankAccount(Integer id) {
+//        if(!bankAccounts.contains(id)) {
+//            return bankAccounts.add(id);
+//        }
+//
+//        return false;
+//    }
 
-        return false;
-    }
-
-    public boolean removeBankAccount(Integer id) {
-        if(bankAccounts.contains(id)) {
-            return bankAccounts.remove(id);
-        }
-
-        return false;
-    }
+//    public boolean removeBankAccount(Integer id) {
+//        if(bankAccounts.contains(id)) {
+//            return bankAccounts.remove(id);
+//        }
+//
+//        return false;
+//    }
 
     public boolean isActive() {
         return active;
@@ -80,13 +79,13 @@ public class UserAccount {
         return id;
     }
 
-    public List<Integer> getBankAccounts() {
-        return bankAccounts;
-    }
-
-    public void setBankAccounts(List<Integer> bankaccounts) {
-        this.bankAccounts = bankaccounts;
-    }
+//    public List<Integer> getBankAccounts() {
+//        return bankAccounts;
+//    }
+//
+//    public void setBankAccounts(List<Integer> bankaccounts) {
+//        this.bankAccounts = bankaccounts;
+//    }
 
     public void setId(int id) {
         this.id = id;

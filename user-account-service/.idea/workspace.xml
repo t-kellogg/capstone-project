@@ -5,15 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23fac06-9491-4e29-99dc-708098a3a07a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/clients/BankAccountClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/AccountType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/UserAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/UserAccountServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/models/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/UserAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/UserAccountServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/controllers/UserAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/controllers/UserAccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/models/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/models/UserAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ey/UserAccountServiceApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,6 +62,11 @@
     "last_opened_file_path": "C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\user-account-service\src\main\java\com\ey\models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="UserAccountServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ey.UserAccountServiceApplication" />
@@ -75,5 +108,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
