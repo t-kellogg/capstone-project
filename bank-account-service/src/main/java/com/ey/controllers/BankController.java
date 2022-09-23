@@ -1,6 +1,9 @@
 package com.ey.controllers;
 
+import com.ey.models.Action;
 import com.ey.models.BankAccount;
+import com.ey.models.Log;
+import com.ey.models.TransactionForm;
 import com.ey.services.BankService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,20 +13,21 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/bank")
 public class BankController {
 
     @Autowired
     BankService bankService;
 
 
-    @GetMapping("/bankaccounts")
+    @GetMapping
     public ResponseEntity<List<BankAccount>> getAllBankAccounts() {
         List<BankAccount> bankAccounts = (List<BankAccount>)bankService.getAllBankAccounts();
 
         return ResponseEntity.ok(bankAccounts);
     }
 
-    @GetMapping("/bankaccounts/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<BankAccount> getBankAccountById(@PathVariable("id") String id) {
         return ResponseEntity.ok(bankService.getBankAccount(Integer.parseInt(id)));
     }
@@ -34,7 +38,7 @@ public class BankController {
         return ResponseEntity.status(201).body(newBankAccount);
     }
 
-    @PutMapping("/bankaccounts/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<BankAccount> updateBankAccount(@RequestBody BankAccount bankAccount, @PathVariable String id) {
         bankAccount.setId(Integer.parseInt(id));
         BankAccount updatedBankAccount = bankService.updateBankAccount(bankAccount);
@@ -44,7 +48,7 @@ public class BankController {
         return ResponseEntity.badRequest().build();
     }
 
-    @DeleteMapping("/bankaccounts/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<BankAccount> deleteBankAccount(@PathVariable String id) {
 
         Optional<BankAccount> bankAccountOptional = Optional.of(bankService.getBankAccount(Integer.parseInt(id)));
@@ -58,5 +62,31 @@ public class BankController {
         return ResponseEntity.badRequest().build();
     }
 
-
+    @PostMapping("/transfer")
+    public ResponseEntity<Log> performTransaction(@RequestBody TransactionForm transactionForm){
+        if(transactionForm.getAction().equals(Action.WITHDRAW)){
+            Log log = bankService.performWithdraw(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else if(transactionForm.getAction().equals(Action.DEPOSIT)){
+            Log log = bankService.performDeposit(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else if(transactionForm.getAction().equals(Action.TRANSFER)){
+            Log log = bankService.performTransfer(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else{
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }
