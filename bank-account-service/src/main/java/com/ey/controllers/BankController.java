@@ -1,6 +1,9 @@
 package com.ey.controllers;
 
+import com.ey.models.Action;
 import com.ey.models.BankAccount;
+import com.ey.models.Log;
+import com.ey.models.TransactionForm;
 import com.ey.services.BankService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -58,5 +61,31 @@ public class BankController {
         return ResponseEntity.badRequest().build();
     }
 
-
+    @PostMapping
+    public ResponseEntity<Log> performTransaction(@RequestBody TransactionForm transactionForm){
+        if(transactionForm.getAction().equals(Action.WITHDRAW)){
+            Log log = bankService.performWithdraw(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else if(transactionForm.getAction().equals(Action.DEPOSIT)){
+            Log log = bankService.performDeposit(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else if(transactionForm.getAction().equals(Action.TRANSFER)){
+            Log log = bankService.performTransfer(transactionForm);
+            if(log != null){
+                return ResponseEntity.ok(log);
+            }else{
+                return ResponseEntity.badRequest().build();
+            }
+        }else{
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

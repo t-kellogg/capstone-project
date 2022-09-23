@@ -91,6 +91,14 @@ public class Log {
         this.toBank = toBank;
     }
 
+    public Action getAction() {
+        return action;
+    }
+
+    public void setAction(Action action) {
+        this.action = action;
+    }
+
     @Override
     public String toString() {
         return "Log{" +
