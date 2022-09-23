@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d23fac06-9491-4e29-99dc-708098a3a07a" name="Changes" comment="" />
+    <list default="true" id="d23fac06-9491-4e29-99dc-708098a3a07a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/Client/UserAccountClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/bank-account-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/bank-account-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/BankAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/BankAccountServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/BankAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/BankAccountServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/models/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/models/BankAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -26,9 +45,14 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/bank-account-service&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\user-account-service\src\main\java\com\ey\models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="UserAccountServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ey.UserAccountServiceApplication" />
@@ -70,5 +94,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

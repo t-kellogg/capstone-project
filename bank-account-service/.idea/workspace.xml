@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b4bc1291-1568-4bdd-bbc4-031b64162978" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../user-account-service/src/main/java/com/ey/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-account-service/src/main/java/com/ey/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-account-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-account-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-account-service/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/Client/UserAccountClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank-account-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/BankAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/BankAccountServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/BankAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/BankAccountServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/models/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/models/BankAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-account-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2F5nnnKsedNZKMy7y3OAko6n3RZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -24,23 +43,33 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/bank-account-service"
+    "last_opened_file_path": "C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\bank-account-service\src\main\java\com\ey\models" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="BankAccountServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ey.BankAccountServiceApplication" />
       <module name="bank-account-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ey.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="bank-account-service" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BankAccountServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,5 +81,16 @@
       <updated>1663790981980</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

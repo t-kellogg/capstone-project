@@ -1,10 +1,9 @@
 package com.ey.models;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Entity
-@Table(name="bank_accounts")
+//@Entity
+//@Table(name="bank_accounts")
 public class BankAccount {
 
     @Id
@@ -21,14 +20,6 @@ public class BankAccount {
     @Column(name = "active")
     private boolean active;
 
-
-
-    @ElementCollection
-    @CollectionTable(name = "user_accounts_bank_accounts",
-            joinColumns = @JoinColumn(name = "bank_account_id"))
-    @Column(name="user_account_id")
-    private List<Integer> userAccounts;
-
     public BankAccount() {
     }
 
@@ -37,14 +28,6 @@ public class BankAccount {
         this.type = type;
         this.balance = balance;
         this.active = active;
-    }
-
-    public List<Integer> getUserAccounts() {
-        return userAccounts;
-    }
-
-    public void setUserAccounts(List<Integer> userAccounts) {
-        this.userAccounts = userAccounts;
     }
 
     public int getId() {

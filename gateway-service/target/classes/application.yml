@@ -10,16 +10,16 @@ spring:
       routes:
         # =====================
         - id: useraccount
-          uri: lb://useraccounts
+          uri: lb://useraccount
           predicates:
             - Path=/useraccounts/**
         # =====================
         - id: bankaccount
-          uri: lb://bankaccounts
+          uri: lb://bankaccount
           predicates:
             - Path=/bankaccounts/**
         # =====================
         - id: authorization
-          uri: lb://authorizations
+          uri: lb://authorization
           predicates:
             - Path=/authorizations/**
