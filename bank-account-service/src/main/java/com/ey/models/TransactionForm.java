@@ -2,7 +2,6 @@ package com.ey.models;
 
 public class TransactionForm {
 
-    private int transactionId;
     private String username;
     private String token;
     private int fromBankId;
@@ -14,8 +13,7 @@ public class TransactionForm {
     public TransactionForm() {
     }
 
-    public TransactionForm(int transactionId, String username, String token, int fromBankId, int toBankId, Action action, float transactionAmount) {
-        this.transactionId = transactionId;
+    public TransactionForm(String username, String token, int fromBankId, int toBankId, Action action, float transactionAmount) {
         this.username = username;
         this.token = token;
         this.fromBankId = fromBankId;
@@ -24,13 +22,6 @@ public class TransactionForm {
         this.transactionAmount = transactionAmount;
     }
 
-    public int getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(int transactionId) {
-        this.transactionId = transactionId;
-    }
 
     public String getUsername() {
         return username;
@@ -83,9 +74,8 @@ public class TransactionForm {
     @Override
     public String toString() {
         return "TransactionForm{" +
-                "transactionId=" + transactionId +
-                ", username='" + username + '\'' +
-                ", token='" + token + '\'' +
+                "username=" + username +
+                ", token='" + token + "'" +
                 ", fromBankId=" + fromBankId +
                 ", toBankId=" + toBankId +
                 ", action=" + action +

@@ -1,5 +1,6 @@
 package com.ey.services;
 
+import com.ey.models.Action;
 import com.ey.models.BankAccount;
 import com.ey.models.Log;
 import com.ey.models.TransactionForm;
@@ -85,8 +86,10 @@ public class BankServiceImpl implements BankService{
 
     @Override
     public Log performTransfer(TransactionForm transactionForm) {
+
         //Auth
         //Withdraw
+        transactionForm.setAction(Action.WITHDRAW);
         Optional<BankAccount> fromBankAccount = bankRepo.findById(transactionForm.getFromBankId());
         if(fromBankAccount.isEmpty()) return null;
         Float fromNewBalance = getNewBalance(transactionForm, fromBankAccount);
@@ -94,11 +97,14 @@ public class BankServiceImpl implements BankService{
         bankRepo.save(fromTransactionBankAccount);
 
         // Deposit
+        transactionForm.setAction(Action.DEPOSIT);
         Optional<BankAccount> toBankAccount = bankRepo.findById(transactionForm.getToBankId());
         if(toBankAccount.isEmpty()) return null;
         Float ToNewBalance = getNewBalance(transactionForm, toBankAccount);
         BankAccount toTransactionBankAccount = convertToBankAccount(transactionForm.getToBankId(),ToNewBalance);
         bankRepo.save(toTransactionBankAccount);
+
+        transactionForm.setAction(Action.TRANSFER);
 
         // Add log to the log table
         Log log = createLog(transactionForm);
@@ -106,25 +112,36 @@ public class BankServiceImpl implements BankService{
         return log;
     }
 
-    private static Float getNewBalance(TransactionForm transactionForm, Optional<BankAccount> fromBankAccount) {
+    private Float getNewBalance(TransactionForm transactionForm, Optional<BankAccount> fromBankAccount) {
         float fromNewBalance = 0;
         float currentBalance = fromBankAccount.get().getBalance();
-        if(transactionForm.getTransactionAmount() > 0) {
-            fromNewBalance = currentBalance - transactionForm.getTransactionAmount();
+
+        BankAccount toBankAccount = getBankAccount(transactionForm.getToBankId());
+
+        Action action = transactionForm.getAction();
+
+        if(action == Action.DEPOSIT) {
+            if(transactionForm.getTransactionAmount() > 0) {
+                fromNewBalance = toBankAccount.getBalance() + transactionForm.getTransactionAmount();
+            }
         }
+        else if(action == Action.WITHDRAW) {
+            if(transactionForm.getTransactionAmount() > 0) {
+                fromNewBalance = currentBalance - transactionForm.getTransactionAmount();
+            }
+        }
+
         return fromNewBalance;
     }
 
     private BankAccount convertToBankAccount(int bankId, float balance){
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.setId(bankId);
+        BankAccount bankAccount = getBankAccount(bankId);
         bankAccount.setBalance(balance);
         return bankAccount;
     }
 
     private Log createLog(TransactionForm transactionForm){
         Log log = new Log();
-        log.setId(transactionForm.getTransactionId());
         log.setAction(transactionForm.getAction());
         log.setAmount(transactionForm.getTransactionAmount());
         log.setTimestamp(System.currentTimeMillis());
