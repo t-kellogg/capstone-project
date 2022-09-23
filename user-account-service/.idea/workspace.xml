@@ -5,30 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23fac06-9491-4e29-99dc-708098a3a07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/clients/BankAccountClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/Client/UserAccountClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/bank-account-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/bank-account-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/BankAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/BankAccountServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/BankAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/BankAccountServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/models/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/target/classes/com/ey/models/BankAccount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/UserAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/UserAccountServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/models/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/UserAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/UserAccountServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/controllers/UserAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/controllers/UserAccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/models/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/models/UserAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ey/UserAccountServiceApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +41,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\user-account-service\src\main\java\com\ey\models" />
