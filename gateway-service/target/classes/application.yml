@@ -22,4 +22,4 @@ spring:
         - id: authorization
           uri: lb://authorization
           predicates:
-            - Path=/authorizations/**
+            - Path=/authorization/**
