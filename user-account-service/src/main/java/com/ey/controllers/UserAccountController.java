@@ -1,6 +1,7 @@
 package com.ey.controllers;
 
 import com.ey.clients.BankAccountClient;
+import com.ey.models.AuthorizeForm;
 import com.ey.models.BankAccount;
 import com.ey.models.UserAccount;
 import com.ey.services.UserAccountService;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("useraccounts")
+@RequestMapping("/useraccounts")
 public class UserAccountController {
 
     @Autowired
@@ -97,6 +98,12 @@ public class UserAccountController {
             return (ResponseEntity<UserAccount>) ResponseEntity.badRequest();
         }
 
+    }
+
+    @PostMapping("/verify")
+    public UserAccount getUserAccountByLogin(@RequestBody AuthorizeForm authorizeForm) {
+        UserAccount userAccount = us.getUserByUsernameAndToken(authorizeForm.getUsername(), authorizeForm.getToken());
+        return userAccount;
     }
 
 }

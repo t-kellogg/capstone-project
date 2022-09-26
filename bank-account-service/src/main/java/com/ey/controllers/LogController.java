@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/logs")
+@RequestMapping("/bankaccounts/logs")
 public class LogController {
 
     @Autowired

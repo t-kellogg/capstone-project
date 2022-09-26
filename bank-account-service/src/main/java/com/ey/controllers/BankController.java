@@ -1,9 +1,9 @@
 package com.ey.controllers;
 
-import com.ey.models.Action;
-import com.ey.models.BankAccount;
-import com.ey.models.Log;
-import com.ey.models.TransactionForm;
+import com.ey.Client.AuthenticationClient;
+import com.ey.Client.AuthorizationClient;
+import com.ey.Client.UserAccountClient;
+import com.ey.models.*;
 import com.ey.services.BankService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,11 +13,19 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/bank")
+@RequestMapping("/bankaccounts")
 public class BankController {
 
     @Autowired
     BankService bankService;
+
+    @Autowired
+    AuthenticationClient authenticationClient;
+    @Autowired
+    AuthorizationClient authorizationClient;
+
+    @Autowired
+    UserAccountClient userAccountClient;
 
 
     @GetMapping
@@ -64,6 +72,25 @@ public class BankController {
 
     @PostMapping("/transfer")
     public ResponseEntity<Log> performTransaction(@RequestBody TransactionForm transactionForm){
+
+        AuthenticationForm authenticationForm = new AuthenticationForm(transactionForm.getUsername(), transactionForm.getToken());
+        Boolean authenticated = authorizationClient.checkAuthentication(authenticationForm);
+
+        if(!authenticated) {
+            return ResponseEntity.status(403).build();
+        }
+
+       // Must authorize frombank and id if transfer or withdrawal
+        Action action = transactionForm.getAction();
+        if(action == Action.WITHDRAW || action == Action.TRANSFER) {
+            int id = getUserId(transactionForm.getUsername(), transactionForm.getToken());
+            AuthorizationForm authorizationForm = new AuthorizationForm(id, transactionForm.getFromBankId());
+            Boolean authorized = authorizationClient.checkAuthorization(authorizationForm);
+            if(!authorized) {
+                return ResponseEntity.status(403).build();
+            }
+        }
+
         if(transactionForm.getAction().equals(Action.WITHDRAW)){
             Log log = bankService.performWithdraw(transactionForm);
             if(log != null){
@@ -89,4 +116,12 @@ public class BankController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    public int getUserId(String username, String token) {
+        AuthorizeForm authorizeForm = new AuthorizeForm(username, token);
+        UserAccount userAccount = userAccountClient.getUserAccountByLogin(authorizeForm);
+        return userAccount.getId();
+    }
+
+
 }

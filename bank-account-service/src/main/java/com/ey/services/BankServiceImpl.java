@@ -116,12 +116,11 @@ public class BankServiceImpl implements BankService{
         float fromNewBalance = 0;
         float currentBalance = fromBankAccount.get().getBalance();
 
-        BankAccount toBankAccount = getBankAccount(transactionForm.getToBankId());
-
         Action action = transactionForm.getAction();
 
         if(action == Action.DEPOSIT) {
             if(transactionForm.getTransactionAmount() > 0) {
+                BankAccount toBankAccount = getBankAccount(transactionForm.getToBankId());
                 fromNewBalance = toBankAccount.getBalance() + transactionForm.getTransactionAmount();
             }
         }
@@ -149,6 +148,10 @@ public class BankServiceImpl implements BankService{
         toBankAccount.ifPresent(log::setToBank);
         Optional<BankAccount> fromBankAccount = bankRepo.findById((transactionForm.getFromBankId()));
         fromBankAccount.ifPresent(log::setFromBank);
+
+
+
         return log;
     }
+
 }
