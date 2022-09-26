@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d23fac06-9491-4e29-99dc-708098a3a07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../authorization-service/authorization-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/controller/AuthorizationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/AuthenticationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/AuthorizationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/UserAccountsBankAccounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/repositories/UserAccountBankAccountsRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/repositories/UserAccountRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthenticationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthorizationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthorizationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/AuthorizationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/AuthorizationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authorization-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../authorization-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/clients/AuthorizationClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/AuthenticationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-account-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +46,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\user-account-service\src\main\java\com\ey\models" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ey.clients" />
+      <recent name="com.ey.models" />
     </key>
   </component>
   <component name="RunManager">
@@ -110,18 +99,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="2" />
+          <line>59</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
           <line>77</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ey/controllers/UserAccountController.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

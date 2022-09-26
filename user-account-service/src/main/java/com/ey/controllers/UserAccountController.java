@@ -1,11 +1,12 @@
 package com.ey.controllers;
 
+import com.ey.clients.AuthorizationClient;
 import com.ey.clients.BankAccountClient;
-import com.ey.models.AuthorizeForm;
+import com.ey.models.AuthenticationForm;
+
 import com.ey.models.BankAccount;
 import com.ey.models.UserAccount;
 import com.ey.services.UserAccountService;
-import org.springframework.core.env.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,9 @@ public class UserAccountController {
 
     @Autowired
     private BankAccountClient bankAccountClient;
+
+    @Autowired
+    private AuthorizationClient authorizationClient;
 
 //    @Autowired
 //    private Environment env;
@@ -68,10 +72,23 @@ public class UserAccountController {
         return ResponseEntity.ok(userAccount);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<UserAccount> deleteUserAccount(@PathVariable int id) {
+    @PostMapping("/{id}")
+    public ResponseEntity<UserAccount> deleteUserAccount(@PathVariable int id, @RequestBody AuthenticationForm authenticationForm) {
+
+        Boolean authenticated = authorizationClient.checkAuthentication(authenticationForm);
+
+        if(!authenticated) {
+            return ResponseEntity.status(403).build();
+        }
+
+        UserAccount userAccountVerified = us.getUserByUsernameAndToken(authenticationForm.getUsername(), authenticationForm.getToken());
+
+        if(id!=userAccountVerified.getId()) {
+            return ResponseEntity.status(403).build();
+        }
 
         Optional<UserAccount> userAccount = us.getUserById(id);
+
         if (!userAccount.isPresent()) {
             return ResponseEntity.notFound().build();
         }
@@ -101,7 +118,7 @@ public class UserAccountController {
     }
 
     @PostMapping("/verify")
-    public UserAccount getUserAccountByLogin(@RequestBody AuthorizeForm authorizeForm) {
+    public UserAccount getUserAccountByLogin(@RequestBody AuthenticationForm authorizeForm) {
         UserAccount userAccount = us.getUserByUsernameAndToken(authorizeForm.getUsername(), authorizeForm.getToken());
         return userAccount;
     }
