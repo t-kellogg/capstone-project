@@ -1,9 +1,8 @@
 package com.ey.services;
 
-import com.ey.models.Action;
-import com.ey.models.BankAccount;
-import com.ey.models.Log;
-import com.ey.models.TransactionForm;
+import com.ey.Client.UserAccountClient;
+import com.ey.controllers.BankController;
+import com.ey.models.*;
 import com.ey.repositories.BankRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -20,6 +19,9 @@ public class BankServiceImpl implements BankService{
 
     @Autowired
     LogService ls;
+
+    @Autowired
+    UserAccountClient userAccountClient;
 
     @Override
     public BankAccount addBankAccount(BankAccount bankAccount) {
@@ -149,8 +151,8 @@ public class BankServiceImpl implements BankService{
         Optional<BankAccount> fromBankAccount = bankRepo.findById((transactionForm.getFromBankId()));
         fromBankAccount.ifPresent(log::setFromBank);
 
-
-
+        int id = userAccountClient.getUserAccountByLogin(new AuthorizeForm(transactionForm.getUsername(), transactionForm.getToken())).getId();
+        log.setUserAccountId(id);
         return log;
     }
 
