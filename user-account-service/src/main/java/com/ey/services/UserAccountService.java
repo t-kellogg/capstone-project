@@ -13,4 +13,6 @@ public interface UserAccountService {
     public UserAccount updateUser(UserAccount userAccount);
     public boolean deleteUser(int id);
 
+    public UserAccount getUserByUsernameAndToken(String username, String token);
+
 }

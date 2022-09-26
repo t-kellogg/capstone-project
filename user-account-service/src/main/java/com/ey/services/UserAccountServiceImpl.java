@@ -2,6 +2,7 @@ package com.ey.services;
 
 import com.ey.models.UserAccount;
 import com.ey.repositories.UserAccountRepo;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -52,5 +53,11 @@ public class UserAccountServiceImpl implements UserAccountService {
             e.printStackTrace();
             return false;
         }
+    }
+
+    @Override
+    public UserAccount getUserByUsernameAndToken(String username, String token) {
+        Optional<UserAccount> userAccountOptional = ur.findByUsernameAndToken(username, token);
+        return userAccountOptional.get();
     }
 }

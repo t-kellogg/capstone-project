@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4bc1291-1568-4bdd-bbc4-031b64162978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ey/Client/UserAccountClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/authorization-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/controller/AuthorizationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/AuthenticationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/AuthorizationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/UserAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/models/UserAccountsBankAccounts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/repositories/UserAccountBankAccountsRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/repositories/UserAccountRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/services/AuthorizationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/AuthorizationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authorization-service/src/main/java/com/ey/AuthorizationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authorization-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../authorization-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank-account-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-account-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/BankAccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/BankAccountServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ey/models/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/BankAccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/BankAccountServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ey/models/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ey/models/BankAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-account-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,13 +50,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AU944YT/OneDrive - EY/Documents/GitHub/capstone-project/user-account-service&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AU944YT\OneDrive - EY\Documents\GitHub\capstone-project\bank-account-service\src\main\java\com\ey\models" />
